@@ -22,7 +22,7 @@ class ProfileController extends Controller
     }
     
     
-public function create(Request $request)
+    public function create(Request $request)
     {
       
         $this->validate($request, Profile::$rules);
@@ -60,7 +60,7 @@ public function create(Request $request)
         $profilehistory->edited_at = Carbon::now();
         $profilehistory->save();
         
-        return redirect('admin/profile/creat');
+        return redirect('admin/profile/edit');
         
     }
 }
